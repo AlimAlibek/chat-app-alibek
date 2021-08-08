@@ -1,12 +1,14 @@
 const express = require("express");
 const http = require("http");
 const path = require("path");
+const cors = require("cors");
 
 const app = express();
 const server = http.createServer(app);
 const io = require("socket.io")(server);
 
 app.use(express.json());
+app.use(cors());
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("../client/build"))
