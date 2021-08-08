@@ -8,7 +8,7 @@ const io = require("socket.io")(server);
 
 app.use(express.json());
 
-if (process.env.NODE_ENV === "prduction") {
+if (process.env.NODE_ENV === "production") {
     app.use(express.static("../client/build"))
 
     app.get("*", (req, res) => {
