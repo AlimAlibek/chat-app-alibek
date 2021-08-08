@@ -21,4 +21,3 @@ function ErrorBlock ({ error, hideError, children}) {
 }
 
 export default ErrorBlock;
-// ${isUsersHidden && "users-hidden"}

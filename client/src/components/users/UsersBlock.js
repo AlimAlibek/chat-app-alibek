@@ -6,7 +6,6 @@ import "./users-block.css"
 function UsersBlock(props) {
     const [isUsersHidden, setIsUsersHidden] = useState(false);
 
-
     function ballClickHandler() {
         setIsUsersHidden(!isUsersHidden)
     }

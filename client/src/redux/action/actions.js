@@ -20,7 +20,6 @@ export const roomChange = (room) => {
 }
 
 export const usersChange = (users, usersAmount) => {
-    console.log("action usersChange _ " + usersAmount)
     return {
         type: "USERS-CHANGE",
         payload: {

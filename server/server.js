@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
     res.status(200).send({message: "server is running"});
 })
   
-// ======================================================================
+// -----------------------------------------------------------------
 const {auth, roomChange, createRoom, disconnect} = require("./db");
 
 io.on("connection", socket => {
@@ -95,14 +95,12 @@ io.on("connection", socket => {
 });
 
 
-
-
 // ---------------------------------------------------------------------
 
 const PORT = process.env.PORT || 5000;
 
 server.listen(PORT, () => {
-    console.log("server started..." + PORT)
+    console.log(`server has started on ${PORT}`)
 })
 
 

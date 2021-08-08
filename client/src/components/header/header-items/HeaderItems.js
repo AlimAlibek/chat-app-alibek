@@ -20,7 +20,6 @@ function HeaderItems() {
     const rooms = usersAmount || initialRooms;
 
     const itemClickHandler = room => {
-        console.log("itemClick = " + room)
         if (room === currentRoom) {
             return;
         }

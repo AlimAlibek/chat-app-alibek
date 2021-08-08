@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Loader from "./loader/Loader";
 import { socket } from "../socket";
 import { connect, createRoom, newMessage, throwError, setLoader} from "../redux/action/actions";
-import {sources} from "./avatarSources/soursec";
+import {sources} from "../images/avatarSoursec";
 
 function Auth({setUser}) {
     const [name, setName] = useState("");

@@ -24,7 +24,6 @@ function Main() {
         });
 
         socket.on("ROOM_CHANGE_RES", ({users, usersAmount, privateUsers, room}) => { 
-            console.log("room ch res .. " + JSON.stringify(users))
             dispatch(roomChange(room));
             dispatch(usersChange(users, usersAmount));
             if (privateUsers) {
@@ -34,12 +33,10 @@ function Main() {
         });
 
         socket.on("USERS_CHANGE", ({users, usersAmount}) => {
-            console.log("socket on users change _ " + usersAmount);
             dispatch(usersChange(users, usersAmount));
         });
 
         socket.on("CREATE_ROOM_RES", ({users, privateUsers, usersAmount, room}) => {
-            console.log("createRoom res .. " + JSON.stringify(users))
             dispatch(newMessage(room));
             dispatch(createRoom(privateUsers, room));
             dispatch(roomChange(room));
