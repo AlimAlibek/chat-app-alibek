@@ -1,0 +1,78 @@
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    /* background: linear-gradient( #bdbdbd, #c0c0c0 , #e6e6e6 , #b6b6b6, #8b8b8b, #7a7472); */
+    background: linear-gradient( #a8a8a8 0%,  #e6e6e6 30%, #424242 100%);
+    box-shadow: 0 0 10px;
+    
+}
+.footer__container {
+    width: 500px;
+    height: 60px;
+    margin: 0 auto;
+    padding-top: 6px;
+}
+
+.footer__container form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.footer__container form .input-container{
+    display: flex;
+    height: 30px;
+    padding: 0;
+    padding: 0 5px;
+    margin-right: 5px;
+    background: rgb(177, 177, 177);
+    box-shadow: -2px -2px 3px inset rgb(250, 250, 250), 1px 1px 10px inset rgb(0, 0, 0);
+    position: relative;
+}
+.footer__container form .input-container img {
+    height: 100%;
+    width: auto;
+}
+
+.footer__container form .input-container input {
+    width: 400px;
+    height: 100%;
+    background: none;
+    font-size: 18px;
+}
+
+form button {
+    padding: 0 3px;
+    background: linear-gradient( #a8a8a8 0%,  #e6e6e6 30%, #424242 100%);
+    box-shadow: 3px 3px 4px ;
+}
+form button:hover {
+    box-shadow: 2px 2px 2px ; 
+}
+form button:active {
+    box-shadow: none;
+}
+
+
+.footer__container form .input-container input[type=file] {
+    display: none;
+}
+.footer__container form .input-container label{
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+.input-container .send-image {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    top: -60px;
+}
+.input-container .send-image img {
+    width: 100%;
+    height: auto;
+    opacity: .7;
+}

@@ -1,0 +1,17 @@
+@keyframes loader-moving {
+    from {left: 0}
+    to {left: 80%}
+}
+
+.header-item_loader {
+    animation: loader-moving 1s infinite alternate;
+    width: 120px;
+
+}
+
+.loader__content{
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    text-shadow: 2px 1px rgb(221, 221, 221), -1px 0 0 rgb(0, 0, 0);
+}

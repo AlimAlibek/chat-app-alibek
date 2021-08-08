@@ -1,0 +1,97 @@
+.crossbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.crossbar__left-hook {
+    position: absolute;
+    top: 16px;
+    left: 15px;
+    z-index: 3;
+}
+.crossbar__left-hook:before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 20px;
+    clip-path: polygon(0 0, 100% 0, 100% 40%, 0 115%);
+    background:  linear-gradient( to right, #7a7472, #c0c0c0 , #e6e6e6 , #979797, #7e7e7e, #7a7472);
+    border-radius: 0 0 0 6px;
+}
+.crossbar__left-hook:after {
+    position: absolute;
+    content: "";
+    top: 7px;
+    left: 2px;
+    width: 20px;
+    height: 15px;
+    clip-path: polygon(60% 0, 100% 0%, 100% 100%, -15% 100%);
+    background:  linear-gradient( #7a7472, #c0c0c0 , #e6e6e6 , #979797, #7e7e7e, #7a7472);
+    border-radius: 0 0 0 6px;
+}
+
+.crossbar__right-hook {
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    z-index: 3;
+}
+
+.crossbar__right-hook::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    width: 15px;
+    height: 20px;
+    clip-path: polygon(0 0, 100% 0, 100% 115%, 0 40%);
+    background:  linear-gradient( to right, #7a7472, #c0c0c0 , #e6e6e6 , #979797, #7e7e7e, #7a7472);
+    border-radius: 0 0 6px 0;
+}
+.crossbar__right-hook:after {
+    position: absolute;
+    content: "";
+    top: 7px;
+    right: 2px;
+    width: 20px;
+    height: 15px;
+    clip-path: polygon(0 0, 40% 0, 115% 100%, 0 100%);
+    background:  linear-gradient( #7a7472, #c0c0c0 , #e6e6e6 , #979797, #7e7e7e, #7a7472);
+    border-radius: 0 0 6px 0;
+}
+
+.crossbar__rod {
+    position: absolute;
+    right: 20px;
+    left: 20px;
+    top: 27px;
+    height: 8px;
+    background: linear-gradient( #7a7472, #c0c0c0 , #e6e6e6 , #979797, #7e7e7e, #7a7472);
+    box-shadow: 10px 12px 13px;
+    z-index: 2;
+}
+.crossbar__rod::before {
+    position: absolute;
+    top: -40px;
+    left: -3px;
+    width: 10px;
+    height: 45px;
+    background: linear-gradient(to right,#7a7472, #c0c0c0 , #e6e6e6 , #979797, #7e7e7e, #7a7472);
+    content: "";
+    box-shadow: 10px 12px 14px;;
+
+}
+.crossbar__rod::after{
+    position: absolute;
+    top: -40px;
+    right: -3px;
+    width: 10px;
+    height: 45px;
+    background: linear-gradient(to right,#7a7472, #c0c0c0 , #e6e6e6 , #979797, #7e7e7e, #7a7472);
+    content: "";
+    box-shadow: 10px 12px 10px;;
+  
+}
+
