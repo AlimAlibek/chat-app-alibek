@@ -8,7 +8,7 @@ import {sources} from "../images/avatarSoursec";
 
 function Auth({setUser}) {
     const [name, setName] = useState("");
-    const [avatar, setAvatar] = useState("");
+    const [avatarIndex, setAvatarIndex] = useState(null);
     const [noAvatar, setNoAvatar] = useState(false);
     
     const loading = useSelector(state => state.loading.loading);
@@ -22,20 +22,21 @@ function Auth({setUser}) {
         }  
     }
 
-    const imgClickHandler = e => {
-        setAvatar(e.target.src);
+    const imgClickHandler = index => {
+        setAvatarIndex(index);
         setNoAvatar(false);
     }
 
     const submitHandler = e => {
         e.preventDefault();
-        if (!avatar) {
+        if (avatarIndex === null) {
             return setNoAvatar(true);
         }
         if (!name.trim().length) {
             return;
         }
-        const newUser = { name, avatar }
+
+        const newUser = { name, avatar: sources[avatarIndex] }
         socket.emit("AUTH", {newUser, room: "1"});
         dispatch(setLoader(true));
     }
@@ -65,6 +66,7 @@ function Auth({setUser}) {
         
     }, [dispatch, setUser])
 
+    console.log(sources);
     return (
         !loading  ?
 
@@ -79,12 +81,12 @@ function Auth({setUser}) {
                 <div className="avatar-choose-container">
                     <div className={noAvatar ? "avatar-alert" : undefined} >выберите аватарку</div>
                     {
-                        sources.map(source => {
+                        sources.map((source, index) => {
                            return <img 
                             src={source} 
                             alt="avatarChoose" 
-                            onClick={imgClickHandler}
-                            className={avatar === source ? "chosen" : null}  
+                            onClick={() => imgClickHandler(index)}
+                            className={avatarIndex === index ? "chosen" : null}  
                             key={source}
                         />
                         })

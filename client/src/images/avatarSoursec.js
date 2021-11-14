@@ -1,8 +1,10 @@
+import avatar1 from './avatarImages/avatar1.jpg';
+import avatar2 from './avatarImages/avatar2.jpg';
+import avatar3 from './avatarImages/avatar3.jpg';
+import avatar4 from './avatarImages/avatar4.jpg';
+import avatar5 from './avatarImages/avatar5.jpg';
+import avatar6 from './avatarImages/avatar6.jpg';
+
 export const sources = [
-    "https://images.wallpaperscraft.ru/image/belka_trava_korzina_leto_zelen_93396_320x240.jpg",
-    "https://images.wallpaperscraft.ru/image/shchenok_sobaka_sneg_159770_320x240.jpg",
-    "https://images.wallpaperscraft.ru/image/kotenok_kot_trava_123220_320x240.jpg",
-    "https://images.wallpaperscraft.ru/image/shchenok_sobaka_milyj_150034_320x240.jpg",
-    "https://images.wallpaperscraft.ru/image/enot_listya_maskirovka_119370_320x240.jpg",
-    "https://images.wallpaperscraft.ru/image/kotenok_kot_milyj_173869_320x240.jpg",
+    avatar1, avatar2, avatar3, avatar4, avatar5, avatar6
 ]
